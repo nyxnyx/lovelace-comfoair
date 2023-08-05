@@ -30,7 +30,7 @@ class ComfoAirCard extends LitElement {
                   <div><ha-icon class="spin" icon="mdi:${({'auto': 'fan', 'off': 'fan-off', low: 'fan-speed-1', medium: 'fan-speed-2', high: 'fan-speed-3'}[this.hass.states[this.config.entity].attributes.fan_mode])}"></ha-icon></div> 
               </div>
               <div class="flex-col-in">
-                  <div>${this.hass.states['sensor.sensor.comfoair_return_temperature'].state}°C</div>
+                  <div>${this.hass.states['sensor.comfoair_return_temperature'].state}°C</div>
                   <div class="fan-state"><ha-icon icon="mdi:fan"></ha-icon> ${Math.trunc(this.hass.states['sensor.comfoair_return_level'].state)}%</div>
                   <div>${this.hass.states['sensor.comfoair_supply_temperature'].state}°C</div>
                   <div class="fan-state"><ha-icon icon="mdi:fan"></ha-icon> ${Math.trunc(this.hass.states['sensor.comfoair_supply_level'].state)}%</div>
